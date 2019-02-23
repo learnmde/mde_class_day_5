@@ -49,7 +49,7 @@ pipeline {
     // Build Container Image using the artifacts produced in previous stages
     stage('Build Container Image'){
      when {
- 				expression { env.BRANCH_NAME == 'develop' }
+ 				expression { env.BRANCH_NAME == 'feature/step0' }
           }
       steps {
         // Copy the resulting artifacts into common directory
@@ -78,7 +78,7 @@ pipeline {
 
     stage('Promote from Build to Dev') {
      when {
- 				expression { env.BRANCH_NAME == 'develop' }
+ 				expression { env.BRANCH_NAME == 'feature/step0' }
           }
       steps {
         script {
@@ -92,7 +92,7 @@ pipeline {
 
     stage ('Verify Deployment to Dev') {
      when {
- 				expression { env.BRANCH_NAME == 'develop' }
+ 				expression { env.BRANCH_NAME == 'feature/step0' }
           }
       steps {
         script {
