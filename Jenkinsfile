@@ -8,7 +8,7 @@ openshift.withCluster() {
   env.STAGE0 = "${projectBase}"
   env.STAGE1 = "${projectBase}"
   env.STAGE2 = "${projectBase}"
-  env.STAGE3 = "${projectBase}"
+  env.STAGE3 = "${projectBase}" 
   echo "POM ${POM_FILE}" 
   echo "STAGE0 ${env.STAGE0}"
   echo "env.BRANCH_NAME --> ${env.BRANCH_NAME}"
