@@ -1,5 +1,5 @@
 /**
- * Unit test class
+ * Unit test class for testing todo application
  */
 package com.mde.controller;
 
